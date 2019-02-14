@@ -34,10 +34,11 @@ Vagrant
 
 ### Plugin
 
-プロキシ
+プロキシの自動設定と，guest additionの導入に必要なVagrantのプラグインをインストールする．
 
 ```bash
 $ vagrant plugin install vagrant-proxyconf
+$ vagrant plugin install vagrant-vbguest
 ```
 
 
