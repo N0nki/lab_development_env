@@ -16,8 +16,14 @@ jsonschema==2.6.0
 jupyter==1.0.0
 jupyter-client==5.2.4
 jupyter-console==6.0.0
+jupyter-contrib-core==0.3.3
+jupyter-contrib-nbextensions==0.5.1
 jupyter-core==4.4.0
+jupyter-highlight-selected-word==0.2.0
+jupyter-latex-envs==1.4.6
+jupyter-nbextensions-configurator==0.4.1
 kiwisolver==1.0.1
+lxml==4.3.1
 MarkupSafe==1.1.0
 matplotlib==3.0.2
 mistune==0.8.4
@@ -39,6 +45,7 @@ Pygments==2.3.1
 pyparsing==2.3.1
 python-dateutil==2.8.0
 pytz==2018.9
+PyYAML==3.13
 pyzmq==17.1.2
 qtconsole==4.4.3
 Send2Trash==1.5.0
