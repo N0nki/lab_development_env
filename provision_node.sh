@@ -13,6 +13,15 @@ echo "clone dotfiles"
 cd ~/
 git clone https://github.com/N0nki/dotfiles
 
+echo "Cica font"
+wget https://github.com/miiton/Cica/releases/download/v4.1.1/Cica-v4.1.1.zip
+unzip Cica-v4.1.1.zip
+mkdir -p ~/.fonts/
+mv Cica-*.ttf ~/.fonts/
+sudo fc-cache -fv
+UUID=$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d \')
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:${UUID}/ font "Cica 15"
+
 echo "install vim"
 git clone https://github.com/vim/vim.git
 cd ~/vim
