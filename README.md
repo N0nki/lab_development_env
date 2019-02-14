@@ -29,6 +29,14 @@ Vagrant
 
 ## Setup
 
+### Plugin
+
+プロキシ
+
+```bash
+$ vagrant plugin install vagrant-proxyconf
+```
+
 
 ## Usage
 
@@ -70,4 +78,4 @@ $ vagrant destroy
 
 * [ ] 導入するプラグインについて書く
 
-    requirements.txtを作る（dotfilesのを引っ張ってくるのをやめる）
+* [ ] requirements.txtを作る（dotfilesのを引っ張ってくるのをやめる）
