@@ -5,7 +5,8 @@
 Vagrantを使用して仮想マシン上に開発環境を自動でセットアップする．  
 （Vagrantのインストール方法は説明しません．）
 
-* **Vagrantfile**
+* **Vagrantfile**  
+仮想マシンの設定を記述する．  
 
 * **provision_root.sh**  
 root権限が必要なコマンドを記述する．
@@ -13,18 +14,20 @@ root権限が必要なコマンドを記述する．
 * **provision_node.sh**  
 root権限を必要としないコマンドを記述する．
 
+* **requirements.txt**  
+インストールするPythonのライブラリを記述する．
 
-### Environment
+## Environment
 
-#### OS
+### OS
 
 Ubuntuの最新長期サポートバージョン18.04LSTを使用する．
 
-#### Network Proxy
+### Network Proxy
 
 Vagrant
 
-#### Python
+### Python
 
 
 ## Setup
