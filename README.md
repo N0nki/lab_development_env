@@ -1,9 +1,12 @@
 # lab_development_env
 
+
 ## Summary
 
 Vagrantを使用して仮想マシン上に開発環境を自動でセットアップする．  
 （Vagrantのインストール方法は説明しません．）
+
+**各ファイルについて**
 
 * **Vagrantfile**  
 仮想マシンの設定を記述する．  
@@ -12,13 +15,14 @@ Vagrantを使用して仮想マシン上に開発環境を自動でセットア�
 root権限が必要なコマンドを記述する．
 
 * **provision_root_simple.sh**  
-provision_root_simple.shの簡易版
+provision_root.shの簡易版
 
 * **provision_node.sh**  
 root権限を必要としないコマンドを記述する．
 
 * **provision_node_simple.sh**
-provision_node_simple.shの簡易版
+provision_node.shの簡易版
+
 
 ## Environment
 
@@ -26,8 +30,19 @@ provision_node_simple.shの簡易版
 
 Ubuntuの最新長期サポートバージョン18.04LSTを使用する．
 
-
 ### Python
+
+Python 3.6.7
+
+パッケージ
+
+* numpy
+* pandas
+* matplotlib
+* networkx
+* graphillion
+* ipython
+* jupyter
 
 
 ## Setup
@@ -101,3 +116,10 @@ sshでホストから仮想マシンにアクセスする．
 ```bash
 $ vagrant ssh
 ```
+
+
+## Misc
+
+### SCP
+
+### Localize
