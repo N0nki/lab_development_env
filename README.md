@@ -23,14 +23,13 @@ root権限を必要としないコマンドを記述する．
 
 Ubuntuの最新長期サポートバージョン18.04LSTを使用する．
 
-### Network Proxy
-
-Vagrant
 
 ### Python
 
 
 ## Setup
+
+自動設定に必要なプラグインや初期設定
 
 ### Plugin
 
@@ -41,8 +40,24 @@ $ vagrant plugin install vagrant-proxyconf
 $ vagrant plugin install vagrant-vbguest
 ```
 
+### Environment Variable
+
+学内プロキシをVagrantで自動設定するために，環境変数にプロキシサーバのアドレスなどを指定する．  
+以下の表に示す名前の環境変数に学内プロキシサーバのアドレスなどを指定してください．
+
+|環境変数|意味|備考|
+|:---:|:----:|:---:|
+|AKITA_UNIV_HTTP_PROXY|httpのプロキシサーバアドレス||
+|AKITA_UNIV_HTTPS_PROXY|httpsのプロキシサーバアドレス||
+|AKITA_UNIV_NO_PROXY|プロキシを適用しないホスト名（カンマ区切り）|例: localhost,127.0.0.1|
+
+3つすべての環境変数が定義されていないとプロキシの自動設定を行わないようになっています．  
+一部の値のみ不要な場合には空文字で定義してください．
+
 
 ## Usage
+
+仮想マシンを操作する基本的なVagrantのコマンド
 
 ### Launch
 
@@ -75,11 +90,3 @@ $ vagrant halt
 ```bash
 $ vagrant destroy
 ```
-
-## TODO
-
-* [ ] プロキシの設定を書く（家でも試したいので別ブランチに作ったほうがいいかも）
-
-* [ ] 導入するプラグインについて書く
-
-* [ ] requirements.txtを作る（dotfilesのを引っ張ってくるのをやめる）
