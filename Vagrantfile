@@ -59,12 +59,16 @@ Vagrant.configure("2") do |config|
   #
   # View the documentation for the provider you are using for more
   # information on available options.
+  
+  # proxy setting
+  http_proxy = ENV["AKITA_UNIV_HTTP_PROXY"]
+  https_proxy = ENV["AKITA_UNIV_HTTPS_PROXY"]
+  no_proxy = ENV["AKITA_UNIV_NO_PROXY"]
 
-  # proxy
-  if Vagrant.has_plugin?("vagrant-proxyconf")
-    config.proxy.http = "http://wproxy.akita-u.ac.jp:8080/"
-    config.proxy.https = "http://wproxy.akita-u.ac.jp:8080/"
-    config.proxy.no_proxy = "localhost,127.0.0.1"
+  if Vagrant.has_plugin?("vagrant-proxyconf") && [http_proxy, https_proxy, no_proxy].all?
+    config.proxy.http = http_proxy
+    config.proxy.https = https_proxy
+    config.proxy.no_proxy = no_proxy
   end
 
   # Enable provisioning with a shell script. Additional provisioners such as
