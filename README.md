@@ -11,11 +11,14 @@ Vagrantを使用して仮想マシン上に開発環境を自動でセットア�
 * **provision_root.sh**  
 root権限が必要なコマンドを記述する．
 
+* **provision_root_simple.sh**  
+provision_root_simple.shの簡易版
+
 * **provision_node.sh**  
 root権限を必要としないコマンドを記述する．
 
-* **requirements.txt**  
-インストールするPythonのライブラリを記述する．
+* **provision_node_simple.sh**
+provision_node_simple.shの簡易版
 
 ## Environment
 
@@ -89,4 +92,12 @@ $ vagrant halt
 
 ```bash
 $ vagrant destroy
+```
+
+### SSH
+
+sshでホストから仮想マシンにアクセスする．
+
+```bash
+$ vagrant ssh
 ```
