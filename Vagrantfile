@@ -80,4 +80,8 @@ Vagrant.configure("2") do |config|
   # SHELL
   config.vm.provision "shell", path: "provision_root.sh"
   config.vm.provision "shell", path: "provision_node.sh", :privileged => false
+
+  # 簡易版セットアップする場合はこちらのスクリプトを使用
+  # config.vm.provision "shell", path: "provision_root.sh"
+  # config.vm.provision "shell", path: "provision_node.sh", :privileged => false
 end
