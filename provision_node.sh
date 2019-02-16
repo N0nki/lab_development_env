@@ -32,15 +32,10 @@ make
 sudo make install
 cd ~/
 
-echo "Python"
-echo 'python3 -m venv ~/myenv' >> setup_myenv.sh
-echo 'source ~/myenv/bin/activate' >> setup_myenv.sh
-echo 'pip install --upgrade pip' >> setup_myenv.sh
-echo 'pip install numpy pandas matplotlib networkx graphillion jupyter jupyte_contrib_nbextensions pynvim' >> setup_myenv.sh
-echo 'jupyter contrib nbextension install --user' >> setup_myenv.sh
-echo 'jupyter nbextensions_configurator enable --user' >> setup_myenv.sh
-echo 'deactivate' >> setup_myenv.sh
-echo 'alias myenv="source ~/myenv/bin/activate"' >>~/.bashrc
+# pip3 install --upgrade pip
+pip3 install numpy pandas matplotlib networkx graphillion ipython jupyter jupyter_contrib_nbextensions pynvim --user
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
 
 echo "glpk"
 wget http://ftp.gnu.org/gnu/glpk/glpk-4.61.tar.gz
