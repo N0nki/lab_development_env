@@ -54,8 +54,7 @@ Python 3.6.7
 プロキシの自動設定と，guest additionの導入に必要なVagrantのプラグインをインストールする．
 
 ```bash
-$ vagrant plugin install vagrant-proxyconf
-$ vagrant plugin install vagrant-vbguest
+$ vagrant plugin install vagrant-proxyconf vagrant-vbguest
 ```
 
 ### Environment Variable
