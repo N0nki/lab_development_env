@@ -1,4 +1,4 @@
-# lab_development_env
+# lab\_development\_env
 
 
 ## Summary
@@ -20,7 +20,7 @@ provision_root.shの簡易版
 * **provision_node.sh**  
 root権限を必要としないコマンドを記述する．
 
-* **provision_node_simple.sh**
+* **provision\_node\_simple.sh**
 provision_node.shの簡易版
 
 
@@ -64,9 +64,9 @@ $ vagrant plugin install vagrant-proxyconf vagrant-vbguest
 
 |環境変数|意味|備考|
 |:---:|:----:|:---:|
-|AKITA_UNIV_HTTP_PROXY|httpのプロキシサーバアドレス||
-|AKITA_UNIV_HTTPS_PROXY|httpsのプロキシサーバアドレス||
-|AKITA_UNIV_NO_PROXY|プロキシを適用しないホスト名（カンマ区切り）|例: localhost,127.0.0.1|
+|AKITA\_UNIV\_HTTP\_PROXY|httpのプロキシサーバアドレス||
+|AKITA\_UNIV\_HTTPS\_PROXY|httpsのプロキシサーバアドレス||
+|AKITA\_UNIV\_NO\_PROXY|プロキシを適用しないホスト名（カンマ区切り）|例: localhost,127.0.0.1|
 
 3つすべての環境変数が定義されていないとプロキシの自動設定を行わないようになっています．  
 一部の値のみ不要な場合には空文字で定義してください．
